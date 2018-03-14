@@ -62,3 +62,7 @@ Route::post('/checkout', [
     'as' => 'checkout',
     'middleware' => 'auth'
 ]);
+
+Route::get('contact', 'ContactController@create')->name('contact.create');
+
+Route::post('contact', 'ContactController@store')->name('contact.store');

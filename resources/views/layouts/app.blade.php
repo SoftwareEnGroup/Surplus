@@ -65,6 +65,7 @@
                                 <div class="dropdown-menu">
                                     @if(Auth::check())
                                     <a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('contact.create') }}">Contact Us</a>
                                         <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -85,6 +86,15 @@
 
         <main class="py-4">
             @yield('content')
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </main>
     </div>
 
