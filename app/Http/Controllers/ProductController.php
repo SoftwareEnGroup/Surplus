@@ -26,7 +26,7 @@ class ProductController extends Controller
 
       $request->session()->put('cart', $cart);
 
-      return redirect()->route('product.index');
+      return redirect()->route('product.shoppingCart');
     }
 
     public function getReduceByOne($id){
