@@ -18,7 +18,7 @@
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Supermarkets</li>
-                            <li><a href="#">Tesco</a></li>
+                            <li><a href="/products">Tesco</a></li>
                             <li><a href="#">Sainsbury</a></li>
                             <li><a href="#">Asda</a></li>
                             <li class="divider"></li>

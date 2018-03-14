@@ -3,6 +3,7 @@
   Laravel Shopping Cart
 @endsection
 @section('content')
+<?php $variable = $_GET['var']; ?>
 @if(Session::has('success'))
 <div class="row">
   <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
@@ -12,9 +13,10 @@
   </div>
 </div>
 @endif
-  @foreach($products->chunk(3) as $productChunk)
+  @foreach($products->chunk(4) as $productChunk)
   <div class="row">
     @foreach($productChunk as $product)
+    @if($variable == ($product->store))
     <div class="col-sm-6 col-md-4">
       <div class="container" style="margin-top: 20px;">
       <div class="card">
@@ -40,6 +42,7 @@
       </div>
       </div>
     </div>
+    @endif
     @endforeach
   </div>
   @endforeach
