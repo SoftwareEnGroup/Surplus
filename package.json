@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "leaflet-search": "^2.4.0"
+        "leaflet-search": "^2.4.0",
+        "mdbootstrap": "^4.5.0"
     }
 }

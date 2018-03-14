@@ -14,7 +14,7 @@
                     @endif
                     Visit a store by going back to map or select from the drop-down list
                     <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Option
+                        <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Select Option
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Supermarkets</li>

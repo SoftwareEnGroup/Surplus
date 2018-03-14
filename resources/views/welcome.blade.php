@@ -117,7 +117,7 @@
                                         <?php foreach($characters as $key => $value):
                                             $pieces = explode(",", $value);?>
                                         var marker = L.marker([<?php echo $pieces[1]; ?>, <?php echo $pieces[2]; ?>]).addTo(mymap);
-                                        marker.bindPopup("<b><?php echo $key; ?></b><br><?php echo $pieces[0]; ?><a href='#'> Click here</a>").openPopup();
+                                        marker.bindPopup("<b><?php echo $key; ?></b><br><?php echo $pieces[0]; ?><a href='/products'> Click here</a>").openPopup();
                                         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                                             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                         }).addTo(mymap);

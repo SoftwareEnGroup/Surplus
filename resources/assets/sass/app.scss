@@ -13,3 +13,18 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.thumbnail img{
+  max-height: 200px;
+}
+.caption h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+.thumbnail .description{
+  color: #7f7f7f;
+}
+.price{
+  font-weight: bold;
+  font-size: 20px;
+}
