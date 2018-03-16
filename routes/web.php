@@ -66,3 +66,13 @@ Route::post('/checkout', [
 Route::get('contact', 'ContactController@create')->name('contact.create');
 
 Route::post('contact', 'ContactController@store')->name('contact.store');
+
+Route::get('/add-product', [
+    'uses' => 'ProductController@getAddProduct',
+    'as' => 'product.addInventory'
+]);
+
+Route::post('/add-product',[
+    'uses' => 'ProductController@postAddProduct',
+    'as' => 'product.addInventory'
+]);
