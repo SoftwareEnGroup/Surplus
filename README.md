@@ -30,16 +30,15 @@ composer require laracasts/flash
 ## Database seed update
 Each time you change the content of the database seeds it will not change dynamically as the table has already been built at the start. You will need to do the following in the console:
 
-``
+```
 composer dump-autoload
 php artisan db:seed
 php artisan migrate:refresh --seed
-``
+```
 
-For a specific datbase seed
+For a specific database seed
 
-``
+```
 composer dump-autoload
 php artisan db:seed --class=UsersTableSeeder
-
-``
+```
