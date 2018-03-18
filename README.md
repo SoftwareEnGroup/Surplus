@@ -26,6 +26,10 @@ This composer package offers a Twitter Bootstrap optimized flash messaging setup
 ```
 composer require laracasts/flash
 ```
+add the Cashier package for Stripe to your dependencies:
+```
+composer require "laravel/cashier":"~7.0"
+```
 
 ## Database seed update
 Each time you change the content of the database seeds it will not change dynamically as the table has already been built at the start. You will need to do the following in the console:
