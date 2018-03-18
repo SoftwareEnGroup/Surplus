@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.md')
 @section('content')
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
-    <h1 class="text-center">Edgars Profile</h1>
+    <h1 class="text-center">User Profile</h1>
     <hr>
     <h2>Your Order History:</h2>
   @foreach($orders as $order)

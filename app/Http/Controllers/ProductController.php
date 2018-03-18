@@ -104,6 +104,6 @@ class ProductController extends Controller
 
 
         Session::forget('cart');
-        return redirect()->route('product.index')->with('success', 'Successfully purchased products!');
+        return redirect()->route('product.shopping-cart')->with('success', 'Successfully purchased products!');
     }
 }
