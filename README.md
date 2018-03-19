@@ -3,11 +3,11 @@ This project is a PHP website built using Laravel's framework and storing data i
 
 ## Setup
 You will need to have Xampp installed beforehand in order to download composer, which you can than install laravel
-/n https://www.apachefriends.org/index.html
-/n https://getcomposer.org/
-/n https://laravel.com/docs/5.6
+<br/>https://www.apachefriends.org/index.html
+<br/>https://getcomposer.org/
+<br/>https://laravel.com/docs/5.6
 
-* Clone your project
+* Clone the project
 * Go to the folder application using cd
 * Run composer install on your cmd or terminal
 * Copy .env.example file to .env on root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal Ubuntu
@@ -29,6 +29,11 @@ composer require laracasts/flash
 add the Cashier package for Stripe to your dependencies:
 ```
 composer require "laravel/cashier":"~7.0"
+```
+In your MYSQL command line you will need to create a database called Surplus
+
+```
+CREATE DATABASE Surplus;
 ```
 
 ## Database seed update
