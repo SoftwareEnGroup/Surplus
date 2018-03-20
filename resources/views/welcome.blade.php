@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -26,12 +27,30 @@
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
+
                 margin: 0;
                 background-image: url(/images/BG.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center;
+            }
+
+            h1{
+              color: #ec5555;
+              text-align: center;
+              font-family: calibri, sans-serif;
+              padding: 0;
+              display: inline-block;
+              font-size: 50px;
+            }
+            h2{
+              color: #ec5555;
+              text-align: center;
+              font-family: calibri, sans-serif;
+              padding: 0;
+              display: inline-block;
+              font-size: 30px;
             }
 
             .full-height {
@@ -82,15 +101,102 @@
                 color: black;
             }
 
+            #header{
+
+              width:200px;
+              left:50%;
+              margin-left: -100px;
+              position: fixed;
+              margin-top: 10px;
+              margin-bottom: 10px;
+
+            }
+
             #mapid {
                 height: 500px;
                 width: 1000px;
             }
+
+            #fakeMap{
+
+              height: 500px;
+              width: 1000px;
+              position: fixed;
+              left: 50%;
+              margin-left: -500px;
+              top: 50%;
+              margin-top: -250px;
+
+            }
+
+            #fakeMapOverlay{
+
+              height: 500px;
+              width: 1000px;
+              position: fixed;
+              left: 50%;
+              margin-left: -500px;
+              top: 50%;
+              margin-top: -250px;
+              background: rgba(255, 255, 255, 0.7);
+              z-index: 1;
+              -webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
+              -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+              -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+              animation-name: appear;
+              animation-duration: 2s;
+              animation-iteration-count: 1;
+
+            }
+
+            #ani{
+
+              -webkit-animation-name: txtAppear; /* Safari 4.0 - 8.0 */
+              -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+              -webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+              animation-name: txtAppear;
+              animation-duration: 2s;
+              animation-iteration-count: 1;
+
+            }
+
+            #buttons{
+
+              color: white;
+              background-color: #ec5555;
+              padding-top: 10px;
+              padding-bottom: 10px;
+
+            }
+
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes appear {
+                0%   {background: rgba(255, 255, 255, 0.0);}
+                100%  {background: rgba(255, 255, 255, 0.7);}
+              }
+
+            /* Standard syntax */
+            @keyframes appear {
+              0%   {background: rgba(255, 255, 255, 0.0);}
+              100%  {background: rgba(255, 255, 255, 0.7);}
+            }
+
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes txtAppear {
+                0%   {opacity: 0.0;}
+                100%  {opacity: 1;}
+              }
+
+            /* Standard syntax */
+            @keyframes txtAppear {
+              0%   {opacity: 0.0;}
+              100%  {opacity: 1;}
+            }
         </style>
     </head>
     <body>
-        <a class="fixed-top" href="#">
-            <img src="images/header.png" height="30" alt="Surplus Logo">
+        <a  class="fixed-top" href="#">
+            <img id="header" src="images/header.png" alt="Surplus Logo">
         </a>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -98,8 +204,8 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a id="buttons" href="{{ route('login') }}">Login</a>
+                        <a id="buttons" href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
@@ -109,9 +215,10 @@
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
                             <div class="panel panel-success">
-                                <div class="panel-heading">Map of Locations</div>
+
                                 <div id="mapid"></div>
                                 @if(Auth::check())
+                                <div class="panel-heading">Map of Locations</div>
                                     <script>
                                         var mymap = L.map('mapid').setView([51.5074, 0.1278], 13);
                                         <?php foreach($characters as $key => $value):
@@ -127,7 +234,21 @@
                             </div>
                               <div class="panel panel-default">
                                 @if(Auth::guest())
-                                <div class="panel-body"><a href="/login" class="btn btn-info"> You need to login to see the the Map 😜😜</a></div>
+                                <div class="panel-body">
+
+                                  <div id="fakeMapOverlay">
+
+                                    <h1 id="ani">Welcome to Surplus!</h1>
+                                    <div >
+                                    <a href="/login" id="ani" class="btn btn-info"><h2 id="ani" >Click here to login </h2></a>
+                                    </div>
+
+                                  </div>
+
+                                  </div>
+                                  <img id="fakeMap" src="images/map.png" >
+
+
                                 @endif
                               </div>
                         </div>
