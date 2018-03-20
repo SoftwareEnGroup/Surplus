@@ -16,7 +16,7 @@
 
 
         <div id="content">
-            <h1 id="code"><span>404</span></h1>
+            <h1 id="code"><span id="span">404</span></h1>
             <h1>Hmm, this isn't right...</h1>
 
 

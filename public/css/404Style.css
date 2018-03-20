@@ -51,9 +51,9 @@ h1{
 }
 
 span {
-  background: url(images/BG.png) no-repeat;
+  background: url(/images/BG.png) no-repeat;
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
   display: block;
   background-position: center top;
   background-size: cover;
