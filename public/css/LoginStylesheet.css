@@ -1,0 +1,196 @@
+body{
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ECECEC;
+    font-family: calibri, sans-serif;
+    font-weight: bold;
+
+}
+
+#header{
+
+    padding-top: 0;
+    margin: 0;
+    top: 0;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+
+
+}
+
+#title{
+
+    position: fixed;
+    top:13px;
+    left:33%;
+    height: 100px;
+    padding: 10px;
+
+
+}
+#footer{
+
+}
+
+#bg{
+  position: fixed;
+  width: 100vw;
+  z-index: -10;
+  top: 0;
+  padding: 0;
+  margin:0;
+}
+
+
+h1{
+
+    color: #ec5555;
+    text-align: center;
+    background-size: cover;
+    font-family: calibri, sans-serif;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 28%;
+    display: inline-block;
+}
+#button {
+    background-color: #ec5555;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: calibri, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+
+}
+
+#r{
+  margin-top: 20px;
+  color:#ec5555;
+}
+
+#box{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ec5555;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form{
+  margin-left: -5%;
+  text-align: center;
+
+}
+
+
+h2{
+
+    color: #6C7A89;
+    background-color: #ABB7B7;
+    background-size: cover;
+    font-family: calibri, sans-serif;
+    padding: 10px;
+    margin: 0;
+    margin-right: 20px;
+    display: inline-block;
+
+}
+
+
+
+#blank{
+
+    height: 20px;
+
+}
+
+#content{
+
+    margin-top: 20%;
+    margin-left: 28%;
+    width: 40%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    font-family: calibri, sans-serif;
+    background: rgba(255, 255, 255, 1);
+    vertical-align: middle;
+
+
+}
+
+#incc{
+
+  margin-top: 20%;
+  margin-left: 28%;
+  width: 40%;
+  height: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  font-family: calibri, sans-serif;
+  background: rgba(255, 255, 255, 1);
+  vertical-align: middle;
+
+}
+
+#inccH1{
+
+margin-left: 5%;
+text-align: center;
+
+
+
+}
+
+#click{
+  margin-top: 10%;
+  color:#ec5555;
+  font-size: 20px;
+  text-align: center;
+
+}
+p, a{
+
+    padding-left: 10px;
+    padding-right:10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+
+}
+
+hr{
+    width: 97%;
+    vertical-align: middle;
+    margin-left: 0;
+
+}
+
+h3.anchor{
+
+    display: block;
+    position: relative;
+    top: -200px;
+    visibility: hidden;
+
+}
+
+#entryContent{
+ margin-top: 0;
+}
