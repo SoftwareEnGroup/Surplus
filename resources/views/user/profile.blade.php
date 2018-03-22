@@ -1,10 +1,11 @@
-@extends('layouts.md')
+@extends('layouts.profile')
 @section('content')
+
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <h1 class="text-center">User Profile</h1>
+  <div id="profileContainer">
+    <h1 id="usrProf">User Profile</h1>
     <hr>
-    <h2>Your Order History:</h2>
+    <h2 id="usrHis">Your Order History:</h2>
   @foreach($orders as $order)
       <div class="panel panel-default">
         <div class="panel-body">
@@ -22,6 +23,7 @@
         </div>
       </div>
       @endforeach
+    
   </div>
 </div>
 @endsection
