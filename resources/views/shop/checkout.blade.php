@@ -1,6 +1,6 @@
 @extends('layouts.md')
 @section('title')
-  Laravel Shopping Cart
+  Checkout
 @endsection
 @section('content')
   <div class="row">

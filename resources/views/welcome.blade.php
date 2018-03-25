@@ -168,8 +168,26 @@
               padding-bottom: 10px;
 
             }
-
-            /* Safari 4.0 - 8.0 */
+			
+			 #home{
+			  position: relative;
+              color: white;
+              background-color: #ec5555;
+              padding-top: 10px;
+              padding-bottom: 10px;
+			  left:-330px;
+			  bottom:-15px;
+            }
+			
+			#map-text{
+				position:relative;
+				bottom:-20px;
+				color:black;
+				font-weight:bold;
+			}
+	
+            
+			/* Safari 4.0 - 8.0 */
             @-webkit-keyframes appear {
                 0%   {background: rgba(255, 255, 255, 0.0);}
                 100%  {background: rgba(255, 255, 255, 0.7);}
@@ -202,7 +220,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a id="home" href="{{ url('/home') }}">Home</a>
                     @else
                         <a id="buttons" href="{{ route('login') }}">Login</a>
                         <a id="buttons" href="{{ route('register') }}">Register</a>
@@ -218,7 +236,7 @@
 
                                 <div id="mapid"></div>
                                 @if(Auth::check())
-                                <div class="panel-heading">Map of Locations</div>
+                                <div class="panel-heading" id="map-text">Map of Locations</div>
                                     <script>
                                         var mymap = L.map('mapid').setView([51.5074, 0.1278], 13);
                                         <?php foreach($characters as $key => $value):

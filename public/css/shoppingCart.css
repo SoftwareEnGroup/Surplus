@@ -15,6 +15,12 @@ body{
     background: url(/images/header.png) no-repeat center center;
     background-size:contain;
     background-color: white;
+
+}
+#nav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 #footer{
@@ -172,6 +178,7 @@ h3.anchor{
   width: 50%;
   left: 25%;
   position: absolute;
+  margin-top: 100px;
 
 
 
@@ -179,7 +186,11 @@ h3.anchor{
 
 .ProductContainer{
 
-  background-color: blue;
+  /*height: 1000px;*/
+  vertical-align: middle;
+
+
+
 }
 
 .list-group{
@@ -188,8 +199,25 @@ h3.anchor{
 
 .list-group-item{
   vertical-align: middle;
-  padding-top: 25%;
-  position: absolute;
+
+  position: relative;
+
+}
+#products{
+
+
+  vertical-align: middle;
+
+  display: table-cell;
+
+}
+
+#proCont{
+
+  vertical-align: middle;
+
+
+
 }
 
 .qty{
@@ -209,14 +237,28 @@ h3.anchor{
 
 }
 
-.btn-group{
-  float: right;
+#optionButt{
+  padding: 10px;
+}
+
+#btnDiv{
+  padding-left: 20px;
+}
+
+#price{
+
+
+
 }
 
 .label{
-  left: 60%;
-  text-align: left;
-  position: absolute;
+
+  float: right;
+  position: relative;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+
 }
 
 #checkoutButton{
@@ -235,6 +277,7 @@ h3.anchor{
 
   padding-top: 20px;
   width: 100%;
+
   font-size: 20px;
   font-weight: bold;
 
