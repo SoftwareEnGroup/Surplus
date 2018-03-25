@@ -9,12 +9,11 @@
       <div class="">
         <ul class="list-group">
             @foreach((array)$products as $product)
-            <li class="list-group-item">
+            <li id="products" class="list-group-item">
             <span class="qty">{{$product['qty']}}</span>
-              <strong>{{$product['item']['title']}}</strong>
-              <span class="label label-success">£{{$product['price']}}</span>
-              <div class="btn-group">
-                <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+              <strong id="price">{{$product['item']['title']}}</strong>
+              <div  id="btnDiv"class="btn-group">
+                <button type="button"id="optionButt" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
                   Options <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
@@ -26,6 +25,9 @@
                   </li>
                 </ul>
               </div>
+              <span class="label label-success">£{{$product['price']}}</span>
+
+
             </li>
             @endforeach
         </ul>
