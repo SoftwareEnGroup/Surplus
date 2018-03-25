@@ -12,6 +12,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @if(Auth::user()->name == 'Admin')
+                            <a href="/add-product">Link to Add Products</a>
+                     @else
                     Visit a store by going back to map or select from the drop-down list
                     <div class="dropdown">
                         <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Select Option
@@ -26,6 +29,7 @@
                             <li><a href="#">Pizza Express</a></li>
                         </ul>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
