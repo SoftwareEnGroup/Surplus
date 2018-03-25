@@ -125,7 +125,7 @@
               left: 50%;
               margin-left: -500px;
               top: 50%;
-              margin-top: -250px;
+              margin-top: -180px;
 
             }
 
@@ -137,7 +137,7 @@
               left: 50%;
               margin-left: -500px;
               top: 50%;
-              margin-top: -250px;
+              margin-top: -180px;
               background: rgba(255, 255, 255, 0.7);
               z-index: 1;
               -webkit-animation-name: appear; /* Safari 4.0 - 8.0 */
@@ -161,11 +161,13 @@
             }
 
             #buttons{
-
+			  position:relative;
               color: white;
               background-color: #ec5555;
               padding-top: 10px;
               padding-bottom: 10px;
+			  bottom:57px;
+			  left:-316px !important;
 
             }
 			
@@ -175,8 +177,8 @@
               background-color: #ec5555;
               padding-top: 10px;
               padding-bottom: 10px;
-			  left:-330px;
-			  bottom:-15px;
+			  left:-316px;
+			  bottom:57px;
             }
 			
 			#map-text{
@@ -184,6 +186,15 @@
 				bottom:-20px;
 				color:black;
 				font-weight:bold;
+			}
+			
+			#topNav{
+				position:relative;
+				border: transparent;
+				background-color:white;
+				width:1753px;
+				height:60px;
+				border-radius: 3px solid transparent;
 			}
 	
             
@@ -210,12 +221,15 @@
               0%   {opacity: 0.0;}
               100%  {opacity: 1;}
             }
+			
         </style>
     </head>
     <body>
+	 <div id="topNav" class="row">
         <a  class="fixed-top" href="#">
             <img id="header" src="images/header.png" alt="Surplus Logo">
         </a>
+		</div>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -227,7 +241,6 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="container">
                     <div class="row">

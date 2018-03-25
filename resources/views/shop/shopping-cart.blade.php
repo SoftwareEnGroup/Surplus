@@ -32,7 +32,7 @@
       </div>
     </div>
     <div id="totalRow" class="row">
-      <div id="totalContainer" class="">
+      <div id="totalContainer" class="" id="totalRow">
         <strong id="totalText">Total:</strong>
         <strong id="totalAmount">£{{number_format((float)$totalPrice, 2, '.', '')}}</strong>
       </div>
