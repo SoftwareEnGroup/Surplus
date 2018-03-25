@@ -33,7 +33,7 @@
           <h4 class="card-title">{{$product->title}}</h4>
           <!--Text-->
           <p class="card-text">{{$product->description}}</p>
-          ${{$product->price}}
+          £{{number_format((float)$product->price, 2, '.', '')}}
             <a href="{{route('product.addToCart', ['id' => $product->id])}}" class="btn btn-success pull-right" role="button">
               <i class="fa fa-plus" aria-hidden="true"></i>
               Add to Cart

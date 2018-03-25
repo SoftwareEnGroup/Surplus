@@ -12,14 +12,14 @@
           <ul class="list-group">
             @foreach((array)$order->cart->items as $item)
             <li class="list-group-item">
-              <span class="badge">${{$item['price']}}</span>
+              <span class="badge">£{{number_format((float)$item['price'], 2, '.', '')}}</span>
               {{$item['item']['title']}} | {{$item['qty']}} Units
             </li>
             @endforeach
           </ul>
         </div>
         <div class="panel-footer">
-          <strong>Total Price: ${{$order->cart->totalPrice}}</strong>
+          <strong>Total Price: £{{number_format((float)$order->cart->totalPrice, 2, '.', '')}}</strong>
         </div>
       </div>
       @endforeach

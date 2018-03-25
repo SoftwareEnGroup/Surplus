@@ -12,7 +12,7 @@
             <li class="list-group-item">
             <span class="qty">{{$product['qty']}}</span>
               <strong>{{$product['item']['title']}}</strong>
-              <span class="label label-success">£{{$product['price']}}</span>
+              <span class="label label-success">£{{number_format((float)$product['price'], 2, '.', '')}}</span>
               <div class="btn-group">
                 <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
                   Options <span class="caret"></span>
@@ -34,7 +34,7 @@
     <div id="totalRow" class="row">
       <div id="totalContainer" class="">
         <strong id="totalText">Total:</strong>
-        <strong id="totalAmount">£{{$totalPrice}}</strong>
+        <strong id="totalAmount">£{{number_format((float)$totalPrice, 2, '.', '')}}</strong>
       </div>
     </div>
     <hr>
