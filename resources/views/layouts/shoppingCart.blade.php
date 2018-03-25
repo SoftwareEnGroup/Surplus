@@ -50,6 +50,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                            <script>window.location.replace("/login");</script>
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
@@ -62,7 +63,7 @@
                             </li>
                             <div class="btn-group">
                                 <button class="btn btn-outline-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</button>
-                                <div class="dropdown-menu">
+                                <div id="dropDown"class="dropdown-menu">
                                     @if(Auth::check())
                                     <a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a>
                                     <a class="dropdown-item" href="{{ route('contact.create') }}">Contact Us</a>

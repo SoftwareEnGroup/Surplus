@@ -1,16 +1,16 @@
-@extends('layouts.md')
+@extends('layouts.checkout')
 @section('title')
   Checkout
 @endsection
 @section('content')
   <div class="row">
-    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
-      <h1>Checkout</h1>
-      <h4>Your Total: £{{number_format((float)$total, 2, '.', '')}}</h4>
+    <div id="checkoutForm"class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+      <h1 id="checkoutTitle">Checkout</h1>
+      <h4 id="total">Your Total: £{{number_format((float)$total, 2, '.', '')}}</h4>
       <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''}}">
         {{Session::get('error')}}
       </div>
-      <form action="{{route('checkout')}}" method="post" id="checkout-form">
+      <form  action="{{route('checkout')}}" method="post" id="checkout-form">
         <div class="row">
           <div class="col-xs-12">
             <div class="form-group">

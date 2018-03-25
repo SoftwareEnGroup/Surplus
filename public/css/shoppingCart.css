@@ -301,3 +301,39 @@ h3.anchor{
   position: relative;
   padding-right: 40px;
 }
+
+#span {
+  background: url(/images/BG.png) no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text !important;
+  display: block;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#NoItemsTxt{
+font-size: 50px;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+#noItems{
+
+    left:50%;
+    top:50%;
+    margin-top: -60px;
+    width: 500px;
+    margin-left: -240px;
+    position: fixed;
+    padding-left:25px;
+    padding-right:25px;
+    font-family: calibri, sans-serif;
+    background-color: rgba(255, 255, 255, 1);
+    background-size: contain;
+    background-clip: text;
+    vertical-align: middle;
+    font-weight: bold;
+
+
+}

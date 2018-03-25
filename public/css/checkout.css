@@ -1,0 +1,223 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    background-image: url(/images/BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#checkoutForm{
+
+
+  font-size: 20px;
+  background-color: white;
+  padding-bottom: 10px;
+}
+#checkoutTitle{
+  color: #EC5555;
+  margin-left: 35%;
+  font-size: 30px;
+}
+#total{
+
+font-family: arial,sans-serif;
+
+}
+
+#nav{
+    background: url(/images/header.png) no-repeat center center;
+    background-size:contain;
+    width: 100%;
+    height: 61.38px;
+    background-color: white;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: fixed;
+    z-index: 1;
+    font-weight: 300;
+    color: #0275d8;
+    border-radius: 0;
+
+
+}
+
+#mapLink{
+
+  font-size: 20px;
+  font-family: Roboto,sans-serif;
+      font-weight: 300;
+      padding-top: 10px;
+      padding-left: 25px;
+
+}
+#shopper{
+
+    margin-top: 5px;
+    color: #0275d8;
+    display: inline;
+    padding-top: 100px;
+    text-decoration: none;
+
+
+}a:hover{text-decoration: none!important;}
+
+#qtyBadge{
+
+  background-color: red;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+
+}
+#headerButton{
+  font-size: 12.96px;
+  padding: 0;
+  height: 45.38px;
+  font-family: Roboto,sans-serif;
+
+  float: right;
+  width: 116.53px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom-color: rgb(255, 53, 71) !important;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  margin-top: 6px!important;
+
+  padding: .84rem 2.14rem;
+
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: .375rem;
+    border: 0;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+
+  display: inline-block;
+    font-weight: 400!important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    border: 2px solid #ff3547!important;
+    border-top-color: rgb(255, 53, 71) !important;
+    border-top-style: solid !important;
+    border-top-width: 2px !important;
+    border-right-color: rgb(255, 53, 71) !important;
+    border-right-style: solid !important;
+    border-right-width: 2px !important;
+    border-bottom-color: rgb(255, 53, 71) !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 2px !important;
+    border-left-color: rgb(255, 53, 71) !important;
+    border-left-style: solid !important;
+    border-left-width: 2px !important;
+    border-image-source: initial !important;
+    border-image-slice: initial !important;
+    border-image-width: initial !important;
+    border-image-outset: initial !important;
+    border-image-repeat: initial !important;
+    background-color: transparent!important;
+    color: #ff3547!important;
+
+}
+
+#dropDown{
+
+  position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+
+      float: left;
+      min-width: 161px;;
+      padding: .5rem 0;
+      margin: .125rem 0 0;
+      font-size: 15px!important;
+      color: #212529;
+      text-align: left;
+      list-style: none;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: .25rem;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+}
+
+#dropdown-item{
+
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 15px;
+
+
+}
+#dropdown-item:hover { background-color:rgba(211, 211, 211, 0.3);; }
+#checkoutForm{
+
+  margin-top: 100px;
+
+
+}
+
+#footer{
+
+}
+
+h1{
+
+    color: #ec5555;
+    text-align: center;
+    background-size: cover;
+    font-family: calibri, sans-serif;
+    padding: 0;
+    margin-top: 0;
+
+    display: inline-block;
+}
+p, a{
+
+    padding-left: 10px;
+    padding-right:10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+
+}
+
+hr{
+    width: 97%;
+    vertical-align: middle;
+    margin-left: 0;
+
+}
