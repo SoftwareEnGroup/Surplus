@@ -1,3 +1,29 @@
+<!doctype html>
+
+<head>
+	<style>
+		.form-group{
+			position:relative;
+			left:580px;
+			bottom:-50px;
+			font-weight:bold;
+		}
+		.text-center{
+			position:relative;
+			left:495px;
+			font-weight:bold;
+			border:1px solid black;
+			background-color:white;
+		}
+		#sub{
+			position:relative;
+			left:760px;
+			bottom:-80px;
+		}
+	
+	</style>
+</head>
+
 @extends('layouts.app')
 @section('content')
     <div class="row">
@@ -24,9 +50,10 @@
                     <label for="price">Price</label>
                     <input type="text" id="price" name="price" class="form-control"/>
                 </div>
-                <button type="submit" class="btn btn-primary">Add new product</button>
+                <button type="submit" class="btn btn-primary" id="sub">Add new product</button>
                 {{csrf_field()}}
             </form>
         </div>
     </div>
 @endsection
+</html>

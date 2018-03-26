@@ -1,5 +1,20 @@
+<!doctype html>
+<head>
+	<style>
+		#add{
+			color:black;
+			left:280px;
+			position:relative;
+			border:1px solid black;
+			width:100px;
+		}
+		#add:hover{
+			color:white;
+		}
+	
+	</style>
+</head>
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -13,7 +28,7 @@
                         </div>
                     @endif
                     @if(Auth::user()->name == 'Admin')
-                            <a href="/add-product">Link to Add Products</a>
+                            <a href="/add-product" id="add">Add Products</a>
                      @else
                     Visit a store by going back to map or select from the drop-down list
                     <div class="dropdown">
@@ -36,3 +51,5 @@
     </div>
 </div>
 @endsection
+
+</html>
