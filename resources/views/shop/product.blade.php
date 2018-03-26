@@ -11,8 +11,9 @@
 		.text-center{
 			position:relative;
 			left:495px;
-			font-weight:bold;
-			border:1px solid black;
+			
+			border:5px solid #ec5555;
+			
 			background-color:white;
 		}
 		#sub{

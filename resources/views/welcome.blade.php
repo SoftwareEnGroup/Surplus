@@ -180,6 +180,16 @@
 			  left:-316px;
 			  bottom:57px;
             }
+			#add{
+				position: relative;
+              color: white;
+              background-color: #ec5555;
+              padding-top: 10px;
+              padding-bottom: 10px;
+			  left:-316px;
+			  bottom:57px;
+				
+			}
 			
 			#map-text{
 				position:relative;
@@ -234,6 +244,9 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
+						@if(Auth::user()->name == 'Admin')
+                            <a href="/add-product" id="add">Add Product</a>
+						@endif
                         <a id="home" href="{{ url('/home') }}">Home</a>
                     @else
                         <a id="buttons" href="{{ route('login') }}">Login</a>

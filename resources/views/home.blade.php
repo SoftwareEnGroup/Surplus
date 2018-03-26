@@ -2,11 +2,12 @@
 <head>
 	<style>
 		#add{
-			color:black;
+			color:#ec5555;
 			left:280px;
 			position:relative;
-			border:1px solid black;
+			border:3px solid #ec5555;
 			width:100px;
+			font-size:18px;
 		}
 		#add:hover{
 			color:white;
