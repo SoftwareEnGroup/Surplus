@@ -63,6 +63,8 @@ Route::post('/checkout', [
     'middleware' => 'auth'
 ]);
 
+Route::get('successful', 'ContactController@successful')->name('contact.successful');
+
 Route::get('faq', 'ContactController@faq')->name('contact.faq');
 
 Route::get('search', 'ContactController@index')->name('contact.index');

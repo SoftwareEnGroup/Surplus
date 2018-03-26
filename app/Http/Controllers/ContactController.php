@@ -19,6 +19,11 @@ class ContactController extends Controller
         return view('contact.faq');
     }
 
+    public function successful()
+    {
+        return view('contact.successful');
+    }
+
     public function create(){
         return view('contact.create');
     }
