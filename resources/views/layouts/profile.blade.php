@@ -66,7 +66,7 @@
                                 <div class="dropdown-menu">
                                     @if(Auth::check())
                                     <a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('contact.create') }}">Contact Us</a>
+                                    <a class="dropdown-item" href="{{ route('contact.index') }}">Contact Us</a>
 										@if(Auth::user()->name == 'Admin')
 											<a class="dropdown-item" href="/add-product">Add Product</a>
 										@endif

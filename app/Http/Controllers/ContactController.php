@@ -9,6 +9,16 @@ use App\Http\Requests\ContactFormRequest;
 
 class ContactController extends Controller
 {
+    public function index()
+    {
+        return view('contact.index');
+    }
+
+    public function faq()
+    {
+        return view('contact.faq');
+    }
+
     public function create(){
         return view('contact.create');
     }
