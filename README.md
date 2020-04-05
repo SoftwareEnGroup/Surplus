@@ -4,8 +4,10 @@ This project is a PHP website built using Laravel's framework and storing data i
 ## Setup
 You will need to have Xampp installed beforehand in order to download composer, which you can than install laravel
 <br/>https://www.apachefriends.org/index.html
-<br/>https://getcomposer.org/
+<br/>https://getcomposer.org/ -> `curl -sS https://getcomposer.org/installer | php`
 <br/>https://laravel.com/docs/5.6
+
+Note: if composer is installed in repo level then do `mv composer.phar /usr/local/bin/composer` to use `composer` command globally
 
 * Clone the project
 * Go to the folder application using cd
@@ -50,4 +52,10 @@ For a specific database seed
 ```
 composer dump-autoload
 php artisan db:seed --class=UsersTableSeeder
+```
+
+# Update Dependencies
+
+```
+composer update
 ```
