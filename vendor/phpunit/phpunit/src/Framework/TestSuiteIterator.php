@@ -14,21 +14,18 @@ use RecursiveIterator;
 /**
  * Iterator for test suites.
  */
-class TestSuiteIterator implements RecursiveIterator
+final class TestSuiteIterator implements RecursiveIterator
 {
     /**
      * @var int
      */
-    protected $position;
+    private $position = 0;
 
     /**
      * @var Test[]
      */
-    protected $tests;
+    private $tests;
 
-    /**
-     * @param TestSuite $testSuite
-     */
     public function __construct(TestSuite $testSuite)
     {
         $this->tests = $testSuite->tests();
@@ -44,8 +41,6 @@ class TestSuiteIterator implements RecursiveIterator
 
     /**
      * Checks if there is a current element after calls to rewind() or next().
-     *
-     * @return bool
      */
     public function valid(): bool
     {
@@ -54,8 +49,6 @@ class TestSuiteIterator implements RecursiveIterator
 
     /**
      * Returns the key of the current element.
-     *
-     * @return int
      */
     public function key(): int
     {
@@ -64,10 +57,8 @@ class TestSuiteIterator implements RecursiveIterator
 
     /**
      * Returns the current element.
-     *
-     * @return Test
      */
-    public function current(): Test
+    public function current(): ?Test
     {
         return $this->valid() ? $this->tests[$this->position] : null;
     }
@@ -83,22 +74,28 @@ class TestSuiteIterator implements RecursiveIterator
     /**
      * Returns the sub iterator for the current element.
      *
-     * @return TestSuiteIterator
+     * @throws \UnexpectedValueException if the current element is no TestSuite
      */
     public function getChildren(): self
     {
-        return new self(
-            $this->tests[$this->position]
-        );
+        if (!$this->hasChildren()) {
+            throw new UnexpectedValueException(
+                'The current item is no TestSuite instance and hence cannot have any children.',
+                1567849414
+            );
+        }
+
+        /** @var TestSuite $current */
+        $current = $this->current();
+
+        return new self($current);
     }
 
     /**
      * Checks whether the current element has children.
-     *
-     * @return bool
      */
     public function hasChildren(): bool
     {
-        return $this->tests[$this->position] instanceof TestSuite;
+        return $this->current() instanceof TestSuite;
     }
 }
