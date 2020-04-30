@@ -36,7 +36,7 @@ class SystemNodeProvider implements NodeProviderInterface
         }
 
         $pattern = '/[^:]([0-9A-Fa-f]{2}([:-])[0-9A-Fa-f]{2}(\2[0-9A-Fa-f]{2}){4})[^:]/';
-        $matches = array();
+        $matches = [];
 
         // first try a  linux specific way
         $node = $this->getSysfs();
@@ -62,13 +62,20 @@ class SystemNodeProvider implements NodeProviderInterface
      */
     protected function getIfconfig()
     {
+        if (strpos(strtolower(ini_get('disable_functions')), 'passthru') !== false) {
+            return '';
+        }
+
         ob_start();
-        switch (strtoupper(substr(php_uname('a'), 0, 3))) {
+        switch (strtoupper(substr(constant('PHP_OS'), 0, 3))) {
             case 'WIN':
                 passthru('ipconfig /all 2>&1');
                 break;
             case 'DAR':
                 passthru('ifconfig 2>&1');
+                break;
+            case 'FRE':
+                passthru('netstat -i -f link 2>&1');
                 break;
             case 'LIN':
             default:
@@ -88,17 +95,19 @@ class SystemNodeProvider implements NodeProviderInterface
     {
         $mac = false;
 
-        if (strtoupper(php_uname('s')) === "LINUX") {
+        if (strtoupper(constant('PHP_OS')) === 'LINUX') {
             $addressPaths = glob('/sys/class/net/*/address', GLOB_NOSORT);
 
             if (empty($addressPaths)) {
                 return false;
             }
 
-            $macs = array_map(
-                'file_get_contents',
-                $addressPaths
-            );
+            $macs = [];
+            array_walk($addressPaths, function ($addressPath) use (&$macs) {
+                if (is_readable($addressPath)) {
+                    $macs[] = file_get_contents($addressPath);
+                }
+            });
 
             $macs = array_map('trim', $macs);
 

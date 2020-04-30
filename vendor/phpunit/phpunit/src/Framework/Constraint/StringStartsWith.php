@@ -9,6 +9,8 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+use PHPUnit\Util\InvalidArgumentHelper;
+
 /**
  * Constraint that asserts that the string it is evaluated for begins with a
  * given prefix.
@@ -20,20 +22,19 @@ class StringStartsWith extends Constraint
      */
     private $prefix;
 
-    /**
-     * @param string $prefix
-     */
     public function __construct(string $prefix)
     {
         parent::__construct();
+
+        if (\strlen($prefix) === 0) {
+            throw InvalidArgumentHelper::factory(1, 'non-empty string');
+        }
 
         $this->prefix = $prefix;
     }
 
     /**
      * Returns a string representation of the constraint.
-     *
-     * @return string
      */
     public function toString(): string
     {
@@ -45,8 +46,6 @@ class StringStartsWith extends Constraint
      * constraint is met, false otherwise.
      *
      * @param mixed $other value or object to evaluate
-     *
-     * @return bool
      */
     protected function matches($other): bool
     {
