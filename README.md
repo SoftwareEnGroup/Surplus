@@ -59,5 +59,3 @@ php artisan db:seed --class=UsersTableSeeder
 ```
 composer update
 ```
-
-
